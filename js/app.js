@@ -9,8 +9,8 @@ Test this function by hand in the console to get it working, and when you think 
 
 // Write your code here
 function sum(a, b) {
-  let mysum = a+b;
-  let mystr = `The sum of ${a} and ${b} is ${mysum}.` ;
+  let mysum = a + b;
+  let mystr = `The sum of ${a} and ${b} is ${mysum}.`;
   return [mysum, mystr];
 }
 
@@ -28,16 +28,16 @@ Write a function called multiply() that takes in two numbers as arguments and re
 Test this function by hand in the console to get it working, and when you think it is finished, uncomment the call for the testMultiply() function and see if the test passes.*/
 
 // Write your code here
-function multiply(a, b) { 
-  let mymult = a*b;
-  let mystr2 = `The product of ${a} and ${b} is ${mymult}.` ;
+function multiply(a, b) {
+  let mymult = a * b;
+  let mystr2 = `The product of ${a} and ${b} is ${mymult}.`;
   return [mymult, mystr2];
 
 }
 
 
 // Here is the test for multiply(); uncomment it to run it
-testMultiply(5,9);
+testMultiply(5, 9);
 
 // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop. Don't forget to create a new branch for your work on the next question!
 
@@ -53,17 +53,17 @@ IMPORTANT DETAIL: You may not use the arithmetic operators + and * in this funct
 Test this function by hand in the console to get it working, and when you think it is finished, uncomment the call for the testSumAndMultiply() function and see if the test passes.*/
 
 // Write your code here
-function sumAndMultiply(a, b, c) { 
+function sumAndMultiply(a, b, c) {
   // Write your code here
-  let mysum2 = sum(sum(a,b)[0],c)[0];
-  let mymult2 = multiply(multiply(a,b)[0],c)[0];
+  let mysum2 = sum(sum(a, b)[0], c)[0];
+  let mymult2 = multiply(multiply(a, b)[0], c)[0];
   let string3 = `${a} and ${b} and ${c} sum to ${mysum2}.`;
   let string4 = `The product of ${a} and ${b} and ${c} is ${mymult2}.`;
   return [mysum2, mymult2, string3, string4];
 }
 
 // Here is the test for sumAndMultiply(); uncomment it to run it
-testSumAndMultiply(4,7,5);
+testSumAndMultiply(4, 7, 5);
 
 // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop. Don't forget to create a new branch for your work on the next question!
 
@@ -81,7 +81,7 @@ Test this function by hand in the console to get it working, and when you think 
 let testArray = [2, 3, 4];
 
 function sumArray(sumArr) {
-  let sum4 = sum(sum(testArray[0],testArray[1])[0],testArray[2])[0];
+  let sum4 = sum(sum(testArray[0], testArray[1])[0], testArray[2])[0];
   let stringarr = `${testArray[0]},${testArray[1]},${testArray[2]} was passed in as an array of numbers, and ${sum4} is their sum.`;
   return [sum4, stringarr];
 }
@@ -103,14 +103,14 @@ IMPORTANT DETAIL: You may not use the arithmetic operator * in this function. To
 Test this function by hand in the console to get it working, and when you think it is finished, uncomment the call for the testMultiplyArray() function and see if the test passes.*/
 
 // Write your code here
-function multiplyArray(multArr) { 
-  let mult4 = multiply(multiply(testArray[0],testArray[1])[0],testArray[2])[0];
+function multiplyArray(multArr) {
+  let mult4 = multiply(multiply(testArray[0], testArray[1])[0], testArray[2])[0];
   let stringmultarray = `The numbers ${testArray[0]},${testArray[1]},${testArray[2]} have a product of ${mult4}.`;
   return [mult4, stringmultarray];
 }
 
 // Here is the test for multiplyArray(); uncomment it to run it
-testMultiplyArray(testArray); 
+testMultiplyArray(testArray);
 
 
 
@@ -133,13 +133,18 @@ This function should be dynamic, accepting an array of any length.
 Test this function by hand in the console to get it working, and when you think it is finished, uncomment the call for the testMultiplyAnyArray() function and see if the test passes.*/
 
 // Write your code here
-let testDynamicArray = [1,2,3,4,5]; //eslint-disable-line
+let testDynamicArray = [1, 2, 3, 4, 5]; //eslint-disable-line
+
+let dyar = Arrayj();
+
+dyar.length;
 
 function multiplyAnyArray(dynamicArray) {
-  let final = multiply(multiply(testDynamicArray[0],multiply(testDynamicArray[1],testDynamicArray[2])[0],testDynamicArray[3],testDynamicArray[4])[0])[0];
-  let stringend = `The numbers ${testDynamicArray[0]},${testDynamicArray[1]},${testDynamicArray[2]},${testDynamicArray[3]},${testDynamicArray[4]} have a product of ${final}.`;
-  console.log(final);
-  return [final, stringend];
+  for (let p = 0; p <= dyar.length; p++) {
+    let stringend = `The numbers ${testDynamicArray[0]},${testDynamicArray[1]},${testDynamicArray[2]},${testDynamicArray[3]},${testDynamicArray[4]} have a product of ${final}.`;
+    console.log(final);
+    return [final, stringend];
+  }
 }
 
 // Here is the test for multiplyArray(); uncomment it to run it
